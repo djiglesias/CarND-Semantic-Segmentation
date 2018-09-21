@@ -100,7 +100,10 @@ ENV/
 # mypy
 .mypy_cache/
 
-RUNS/
-
 #Visual Studio
 .vscode/
+
+# Training Data & Images
+RUNS/
+runs/
+data/
