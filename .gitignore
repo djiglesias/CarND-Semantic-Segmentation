@@ -106,4 +106,3 @@ ENV/
 # Training Data & Images
 RUNS/
 runs/
-data/
