@@ -202,7 +202,7 @@ def run():
     tests.test_for_kitti_dataset(data_dir)
 
     # Training Model Parameters
-    epochs = 3
+    epochs = 40
     batch_size = 5
 
     # TF Placeholders
@@ -248,7 +248,10 @@ def run():
         helper.save_inference_samples(runs_dir, data_dir, sess, image_shape, logits, keep_prob, input_image)
 
         # OPTIONAL: Apply the trained model to a video
-
+        # From the folder in runs run the following command to create a video:
+        # $ ffmpeg -r 10 -f image2 -i um_%06d.png -vcodec libx264 -crf 0 -pix_fmt yuv420p test.mp4
+        # Run the follow command to convert the video to a gif.
+        # $ ffmpeg -i test.mp4 out.gif
 
 if __name__ == '__main__':
     run()
